@@ -39,7 +39,7 @@ function showCards() {
         <span>${item.price}</span>
         <span> CAD </span>
         </p>
-        <button onclick="removeitem(${item})">Delete Item</button>
+        <button class="deleteCard" onclick= 'deleteCard("${item.name}" )' >Delete Item</button>
         </div>
         `;
 
@@ -49,7 +49,8 @@ function showCards() {
 }
 
 function removeCards() {
-  document.querySelector(".products").style.display = "none";
+  const x= document.querySelector(".products");
+  x.style.display = "none";
 }
 
 function removeitem(item) {
@@ -79,6 +80,9 @@ formElement.addEventListener("clear", (e) => {
     document.getElementById("itemphoto").value = "";
   
 });
+
+
+
 
 function search() {
   let itemNameToSearch = document.getElementById("find").value.toUpperCase();
@@ -191,3 +195,17 @@ window.onload=()=>{
 //     document.querySelector("#item-info").style.display = "block";
 //   }
 // }
+
+function deleteCard(e){
+  let allItems = document.querySelectorAll(".product");
+  const allItemNames = document.querySelector(".product-name");
+  
+      for (var i = 0; i < allItems.length; i++) {
+        let itemName = allItems[i].querySelector(".product-name");
+        let value=itemName.innerHTML || itemName.innerText || itemName.textContent;
+        if (value.toUpperCase() == e.toUpperCase()) {
+          allItems[i].style.display = "none";
+        }
+      }
+
+}
