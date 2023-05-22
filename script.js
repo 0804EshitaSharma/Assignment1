@@ -38,14 +38,8 @@ function showCards() {
 }
 
 function removeCards() {
-  const x = document.querySelector(".products");
-  x.style.display = "none";
-}
-
-function removeitem(item) {
-  console.log(item);
-  allItems = allItems.filter((i) => i != item);
-  showCards();
+  const products = document.querySelector(".products");
+  products.style.display = "none";
 }
 
 const formElement = document.querySelector("#form");
@@ -58,9 +52,13 @@ formElement.addEventListener("submit", (e) => {
   document.getElementById("itemdescription").value = "";
   document.getElementById("itemprice").value = "";
   document.getElementById("itemphoto").value = "";
+  var targetSection1 = document.getElementById("home");
+   targetSection1.classList.remove("active");
+   var targetSection2 = document.getElementById("dashboard");
+   targetSection2.classList.add("active");
 });
 
-formElement.addEventListener("clear", (e) => {
+formElement.addEventListener("reset", (e) => {
   e.preventDefault();
   document.getElementById("itemname").value = "";
   document.getElementById("itemdescription").value = "";
