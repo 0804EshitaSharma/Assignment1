@@ -1,32 +1,18 @@
-// var allItems = fetch("data/mockdata.json")
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (items) {
-//     allItems = items;
-//   });
-var allItems=[];
-
+var allItems = [];
 const links = document.querySelectorAll("nav a");
 const sections = document.querySelectorAll("section");
 
-// Add click event listener to each link
 links.forEach((link) => {
   link.addEventListener("click", () => {
-    // Remove active class from all links and sections
     links.forEach((link) => link.classList.remove("active"));
     sections.forEach((section) => section.classList.remove("active"));
-
-    // Add active class to clicked link and section
     link.classList.add("active");
     const targetSection = document.querySelector(link.getAttribute("href"));
     targetSection.classList.add("active");
   });
 });
 
-
 function showCards() {
-  
   let output = "";
   for (let item of allItems) {
     output += `
@@ -50,7 +36,7 @@ function showCards() {
 }
 
 function removeCards() {
-  const x= document.querySelector(".products");
+  const x = document.querySelector(".products");
   x.style.display = "none";
 }
 
@@ -66,24 +52,19 @@ formElement.addEventListener("submit", (e) => {
   const formData = new FormData(formElement);
   const data = Object.fromEntries(formData);
   allItems.push(data);
-    document.getElementById("itemname").value = "";
-    document.getElementById("itemdescription").value = "";
-    document.getElementById("itemprice").value = "";
-    document.getElementById("itemphoto").value = "";
-  
+  document.getElementById("itemname").value = "";
+  document.getElementById("itemdescription").value = "";
+  document.getElementById("itemprice").value = "";
+  document.getElementById("itemphoto").value = "";
 });
 
 formElement.addEventListener("clear", (e) => {
   e.preventDefault();
-    document.getElementById("itemname").value = "";
-    document.getElementById("itemdescription").value = "";
-    document.getElementById("itemprice").value = "";
-    document.getElementById("itemphoto").value = "";
-  
+  document.getElementById("itemname").value = "";
+  document.getElementById("itemdescription").value = "";
+  document.getElementById("itemprice").value = "";
+  document.getElementById("itemphoto").value = "";
 });
-
-
-
 
 function search() {
   let itemNameToSearch = document.getElementById("find").value.toUpperCase();
@@ -101,44 +82,51 @@ function search() {
   }
 }
 
-window.onload=()=>{
-   allItems = fetch("data/mockdata.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (items) {
-    allItems = items;
-  }).then(function(){
-    showCards();
-  } );
-  
+window.onload = () => {
+  allItems = fetch("data/mockdata.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (items) {
+      allItems = items;
+    })
+    .then(function () {
+      showCards();
+    });
 };
 
-function deleteCard(e){
+function deleteCard(e) {
   let allItems = document.querySelectorAll(".product");
   const allItemNames = document.querySelector(".product-name");
-  
-      for (var i = 0; i < allItems.length; i++) {
-        let itemName = allItems[i].querySelector(".product-name");
-        let value=itemName.innerHTML || itemName.innerText || itemName.textContent;
-        if (value.toUpperCase() == e.toUpperCase()) {
-          allItems[i].style.display = "none";
-        }
-      }
 
+  for (var i = 0; i < allItems.length; i++) {
+    let itemName = allItems[i].querySelector(".product-name");
+    let value =
+      itemName.innerHTML || itemName.innerText || itemName.textContent;
+    if (value.toUpperCase() == e.toUpperCase()) {
+      allItems[i].style.display = "none";
+    }
+  }
 }
 
 function filterItems(value) {
-    
   let allItems = document.querySelectorAll(".product");
   for (var i = 0; i < allItems.length; i++) {
     let itemCategory = allItems[i].querySelector(".category");
-    let itemCategoryValue= itemCategory.innerHTML ||  itemCategory.innerText ||  itemCategory.textContent;
-    if (value.toUpperCase() !==  itemCategoryValue.toUpperCase()) {
+    let itemCategoryValue =
+      itemCategory.innerHTML ||
+      itemCategory.innerText ||
+      itemCategory.textContent;
+    if (value.toUpperCase() !== itemCategoryValue.toUpperCase()) {
       allItems[i].style.display = "none";
-    }
-    else{
+    } else {
       allItems[i].style.display = "";
     }
   }
 }
+// let scrollBar= document.querySelector(".product");
+// let btn= document.getElementById("next-btn");
+// scrollBar.addEventListener("wheel",(e)=>{
+// e.preventDefault();
+// scrollBar.scrollLeft+=e.deltaY;
+// });

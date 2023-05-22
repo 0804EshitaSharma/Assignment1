@@ -124,21 +124,21 @@ section.active {
 }
 
 .form-btn {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #03a9f4;
-  color: white;
-  margin: 0px 10px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #03a9f4;
+    color: white;
+    margin: 0px 10px;
 }
 
-.button-box{
+.button-box {
     display: flex;
     justify-content: center;
-   align-items: center;
-   cursor: pointer;
-    
-   
+    align-items: center;
+    cursor: pointer;
+
+
 }
 
 .home {
@@ -205,7 +205,7 @@ section.active {
 .btn-container {
     position: relative;
     margin-left: 240px;
-   
+
 }
 
 .btn {
@@ -235,7 +235,8 @@ section.active {
     cursor: pointer;
     border-radius: 40px;
 }
-.search-container{
+
+.search-container {
     position: sticky;
     top: 90px;
 }
@@ -255,10 +256,6 @@ section.active {
     border-radius: 8px;
     padding: 10px 10px;
     font-size: 20px;
-    /* background-color: transparent; */
-    /* border-bottom: 2px solid #00abf0; */
-    /* border: none; */
-
 }
 
 .search input::placeholder {
@@ -312,14 +309,14 @@ section.active {
     line-height: 1.5;
 }
 
-/* @media screen and (max-width:768px){
-    .about-container{
+@media screen and (max-width:768px) {
+    .about-container {
         width: 80%;
         display: block;
         margin: auto;
         padding-top: 50px;
     }
-} */
+}
 
 .active-button {
     background-color: #00abf0;
@@ -333,8 +330,19 @@ section.active {
     margin: 50px auto;
     max-width: 1440px;
     padding: 20px;
-    
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
 
+.products-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-img {
+    height: 50px;
 }
 
 .product {
@@ -342,14 +350,18 @@ section.active {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     background-color: lightblue;
+    max-height: 500px;
 
 }
 
 .product img {
     width: 100%;
-   margin: auto auto;
+    margin: auto auto;
     display: block;
-    max-width: 200px;
+}
+
+.products ::-webkit-scrollbar {
+    display: none;
 }
 
 .product .product-name {
@@ -392,7 +404,7 @@ nav {
     width: 100%;
     align-items: center;
     position: sticky;
-    top:0px;
+    top: 0px;
 }
 
 nav ul {
@@ -418,11 +430,28 @@ nav ul li a {
     text-decoration: none;
 
 }
+
 nav ul li a:hover {
     color: rgb(115, 115, 214);
 
-} 
+}
 
+#next {
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    max-height: 200px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.product:hover {
+
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
 @media screen and (max-width:768px) {
     nav ul {
@@ -439,54 +468,75 @@ nav ul li a:hover {
         margin: auto;
         padding-top: 50px;
     }
-    .form-content{
+
+    .form-content {
         margin-top: 20px;
         width: 100%;
         height: 50%;
         padding: 5px;
-        height:60vh;
+        height: 60vh;
     }
-    .button-box{
+
+    .button-box {
         display: flex;
-       flex-direction: column;
-      
-       
+        flex-direction: column;
+
+
     }
-    .form-btn{
+
+    .form-btn {
         margin-bottom: 10px;
-       
+
     }
+
     .form-container {
         width: 80%;
     }
 
 
 }
+
 @media screen and (max-width:1083px) {
     .search input {
         width: 30%;
-      margin-left:-20px;
-        font-size: 10px;  
+        margin-left: -20px;
+        font-size: 10px;
         max-width: 450px;
     }
+
     .search h1 {
-       font-size: 10px;
-       display: none;
+        font-size: 10px;
+        display: none;
     }
+
     .search {
-       flex-direction: column;
-    
+        flex-direction: column;
+
     }
+
     .btn-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, auto));
         grid-gap: 5px;
         margin: 50px auto;
-    
+
     }
-    .btn{
+
+    .btn {
         margin-bottom: 10px;
     }
-    
-    
-}    
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+        grid-gap: 50px;
+        margin: 50px auto;
+        max-width: 1440px;
+        padding: 20px;
+        grid-auto-flow: row;
+        overflow-y: auto;
+        overscroll-behavior-inline: contain;
+    }
+
+
+}
