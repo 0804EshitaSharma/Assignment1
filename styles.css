@@ -333,19 +333,23 @@ section.active {
     margin: 50px auto;
     max-width: 1440px;
     padding: 20px;
-    background-color: lightblue;
-
+    
 
 }
 
 .product {
     padding: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    background-color: lightblue;
+
 }
 
 .product img {
     width: 100%;
+   margin: auto auto;
     display: block;
+    max-width: 200px;
 }
 
 .product .product-name {
