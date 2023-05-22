@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a class="navbar_content" href="#home">Home</a>
+            </li>
+            <li>
+                <a class="navbar_content" href="#about">About</a>
+            </li>
+            <li>
+                <a class="navbar_content" href="#dashboard">Dashboard</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <section id="home" class="main">
+        <div class="form-container">
+            <h1 class="form-heading"> Item Form</h1>
+            <form class="form-content" id="form" method="" action="">
+                <div class="input-box">
+                   
+                    <input id="itemname" name="name" type="text" autocomplete="off" required>
+                    <label for="itemname">Item Name</label>
+          
+                </div>
+                <div class="input-box">
+                   
+                    <textarea id="itemdescription" name="description" rows="5" cols="40" maxlength="200"
+                        required></textarea>
+                        <label for="itemdescription">Item Description</label>
+                </div>
+
+                <div class="input-box">
+                   
+                    <input id="itemprice" name="price" type="number" autocomplete="off" required>
+                    <label for="itemprice">Item Price</label>
+                </div>
+               
+                <div class="input-box">
+                    
+                    <input id="itemphoto" type="text" name="url" autocomplete="off" required>
+                    <label for="itemphoto">Image of Item </label>
+                </div>
+                <button class="btn" type="submit">Add Image</button>
+                    
+                
+              
+              
+            </form>
+            
+           
+           
+        </div>
+       
+        <!-- <div id="item-info">
+        </div> -->
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+        <div class="about-content">
+            <h1>
+                Hi, I am Eshita Sharma
+            </h1>
+            <h3>Student at UBC</h3>
+            <div class="content">
+                <p> This is an Inventory Website with features using which where users can add new items, Can view, search using filter Items from Dashboard.
+                    This a project is built using HTML, CSS and vanilla Javascript.This is an Inventory Website with features using which where users can add 
+                    new items, Can view, search using filter Items from Dashboard. This a project is built using HTML, CSS and vanilla Javascript. This is an 
+                    Inventory Website with features using which where users can add new items, Can view, search using filter Items from Dashboard. This a project
+                    is built using HTML, CSS and vanilla Javascript.This is an Inventory Website with features using which where users can add new items, Can view,
+                    search using filter Items from Dashboard.This a project is built using HTML, CSS and vanilla Javascript.
+                </p>
+            </div>
+           
+            <div class="btn-box">
+                <a href="#"> Read More </a>
+               
+            </div>
+            <div class="image-section">
+            <img src="/images/home.JPG">
+            </div>
+        </div>
+           </div>
+    </section>
+    
+
+    <section id="dashboard" class="dashboard">
+       
+        <!-- <div class="btn-container">
+                      
+            <button class="btn" id="showbutton" onclick="showCards()">Show all items</button>
+            <button class="btn" id="removebutton" onclick="removeCards()">Remove all items</button>
+        </div> -->
+            <div class="search">
+                <h1>All Items</h1>
+                <input type="text" id="find" name=" " placeholder="Search here...." onkeyup="search()">
+            </div>
+             <div class="btn-container">
+                      
+            <button class="btn1" class="filter-btn" id="showbutton" onclick="showCards()">All</button>
+            <button class="btn1"  class="filter-btn" id="removebutton" onclick="removeCards()">Remove </button>
+            <button class="btn1"  class="filter-btn"  onclick="filterItems('Electronics')">Electronics</button>
+            <button class="btn1"  class="filter-btn" onclick="filterItems('Groceries')">Groceries</button>
+            <button class="btn1"  class="filter-btn"  onclick="filterItems('Cosmetics')">Cosmetics</button>
+        </div>
+            <div id="item-info" >
+                <!-- <div class="item-container">
+                    </div> -->
+                    <ul id="item-product"></ul>
+            </div>
+     
+     
+
+    </section>
+
+    <script src="script.js"></script>
+
+
+    
+
+</body>
+
+</html>

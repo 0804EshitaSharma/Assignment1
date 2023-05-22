@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Mackbook Pro",
+      "price": 65,
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "url": "https://i.dummyjson.com/data/products/6/1.png",
+      "category":"Electronics"
+    },
+    {
+      "name": "Tomatoes",
+      "price": 10,
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "url": "https://i.dummyjson.com/data/products/30/1.jpg",
+      "category":"Groceries"
+    },
+    {
+      "name": "Airpods Pro",
+      "price": 250,
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "url": "https://i.dummyjson.com/data/products/6/1.png",
+      "category":"Electronics"
+    },
+    {
+      "name": "Nail Paint",
+      "price": 50,
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "url": "https://i.dummyjson.com/data/products/30/1.jpg",
+      "category":"Cosmetics"
+    }
+  ]
