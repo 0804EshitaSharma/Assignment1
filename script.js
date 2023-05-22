@@ -28,7 +28,7 @@ function showCards() {
         <span>${item.price}</span>
         <span> CAD </span>
         </p>
-        <button class="deleteCard" onclick= 'deleteCard("${item.name}" )' >Delete Item</button>
+        <button class="form-btn" onclick= 'deleteCard("${item.name}" )' >Delete Item</button>
         </div>
         `;
 
