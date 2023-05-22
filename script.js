@@ -1,10 +1,11 @@
-var allItems = fetch("data/mockdata.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (items) {
-    allItems = items;
-  });
+// var allItems = fetch("data/mockdata.json")
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (items) {
+//     allItems = items;
+//   });
+var allItems=[];
 
 const links = document.querySelectorAll("nav a");
 const sections = document.querySelectorAll("section");
@@ -24,58 +25,31 @@ links.forEach((link) => {
 });
 
 
-// function showCards() {
-//   let output = "";
-//   for (let item of allItems) {
-//     output += `
-//         <div class="item">
-//         <img class="item-image" src="${item.url}" alt="${item.url}">
-//         <p class="item-name">${item.name}</p>
-//         <p class="item-description">${item.description}</p>
-//         <p class="item-price">
-//         <span> $</span>
-//         <span>${item.price}</span>
-//         <span> CAD </span>
-//         </p>
-//         <button onclick="removeitem(${item})">Delete Item</button>
-//         </div>
-//         `;
-//     // let item = document.createElement("div");
-//     // console.error( i.category);
-//     // item.classList.add("item", i.category.toString(),"hide");
-//     // let itemContainer = document.createElement("div");
-//     // itemContainer.classList.add("item-container");
-//     // let itemImage = document.createElement("img");
-//     // itemImage.setAttribute("src", i.url);
-//     // itemContainer.appendChild(itemImage);
-//     // item.appendChild(itemContainer);
-//     // let container = document.createElement("div");
-//     // container.classList.add("container");
-//     // let name = document.createElement("h5");
-//     // name.classList.add("item-name");
-//     // name.innerText = i.name.toUpperCase();
-//     // container.appendChild(name);
-//     // let price = document.createElement("h6");
-//     // price.classList.add("item-price");
-//     // price.innerText = "$" + i.price;
-//     // container.appendChild(price);
+function showCards() {
+  
+  let output = "";
+  for (let item of allItems) {
+    output += `
+        <div class="product">
+        <img src="${item.url}" alt="${item.url}">
+        <p class="title">${item.name}</p>
+        <p class="description">${item.description}</p>
+        <p class="price">
+        <span> $</span>
+        <span>${item.price}</span>
+        <span> CAD </span>
+        </p>
+        <button onclick="removeitem(${item})">Delete Item</button>
+        </div>
+        `;
 
-//     // let description = document.createElement("p");
-//     // description.classList.add("item-description");
-//     // description.innerText = i.description;
-//     // container.appendChild(description);
-
-//     // item.appendChild(container);
-//     // document.getElementById("item-info").appendChild(item);
-
-//     document.querySelector("#item-info").innerHTML = output;
-
-//     document.querySelector("#item-info").style.display = "block";
-//   }
-// }
+    document.querySelector(".products").innerHTML = output;
+    document.querySelector(".products").style.display = "";
+  }
+}
 
 function removeCards() {
-  document.querySelector("#item-info").style.display = "none";
+  document.querySelector(".products").style.display = "none";
 }
 
 function removeitem(item) {
@@ -90,6 +64,20 @@ formElement.addEventListener("submit", (e) => {
   const formData = new FormData(formElement);
   const data = Object.fromEntries(formData);
   allItems.push(data);
+    document.getElementById("itemname").value = "";
+    document.getElementById("itemdescription").value = "";
+    document.getElementById("itemprice").value = "";
+    document.getElementById("itemphoto").value = "";
+  
+});
+
+formElement.addEventListener("clear", (e) => {
+  e.preventDefault();
+    document.getElementById("itemname").value = "";
+    document.getElementById("itemdescription").value = "";
+    document.getElementById("itemprice").value = "";
+    document.getElementById("itemphoto").value = "";
+  
 });
 
 function search() {
@@ -144,57 +132,62 @@ function search() {
 //   });
 // }
 
-// window.onload=()=>{
-//      filterItems("All");
-//     //showCards();
-// };
+window.onload=()=>{
+   allItems = fetch("data/mockdata.json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (items) {
+    allItems = items;
+  });
+};
 
-function showCards() {
-  let output = "";
-  for (let item of allItems) {
-    output += `
-        <div class="item">
-        <img class="item-image" src="${item.url}" alt="${item.url}">
-        <p class="item-name">${item.name}</p>
-        <p class="item-description">${item.description}</p>
-        <p class="item-price">
-        <span> $</span>
-        <span>${item.price}</span>
-        <span> CAD </span>
-        </p>
-        <button onclick="removeitem(${item})">Delete Item</button>
-        </div>
-        `;
-    // let item = document.createElement("div");
-    // console.error( i.category);
-    // item.classList.add("item", i.category.toString(),"hide");
-    // let itemContainer = document.createElement("div");
-    // itemContainer.classList.add("item-container");
-    // let itemImage = document.createElement("img");
-    // itemImage.setAttribute("src", i.url);
-    // itemContainer.appendChild(itemImage);
-    // item.appendChild(itemContainer);
-    // let container = document.createElement("div");
-    // container.classList.add("container");
-    // let name = document.createElement("h5");
-    // name.classList.add("item-name");
-    // name.innerText = i.name.toUpperCase();
-    // container.appendChild(name);
-    // let price = document.createElement("h6");
-    // price.classList.add("item-price");
-    // price.innerText = "$" + i.price;
-    // container.appendChild(price);
+// function showCards() {
+//   let output = "";
+//   for (let item of allItems) {
+//     output += `
+//         <div class="item">
+//         <img class="item-image" src="${item.url}" alt="${item.url}">
+//         <p class="item-name">${item.name}</p>
+//         <p class="item-description">${item.description}</p>
+//         <p class="item-price">
+//         <span> $</span>
+//         <span>${item.price}</span>
+//         <span> CAD </span>
+//         </p>
+//         <button onclick="removeitem(${item})">Delete Item</button>
+//         </div>
+//         `;
+//     // let item = document.createElement("div");
+//     // console.error( i.category);
+//     // item.classList.add("item", i.category.toString(),"hide");
+//     // let itemContainer = document.createElement("div");
+//     // itemContainer.classList.add("item-container");
+//     // let itemImage = document.createElement("img");
+//     // itemImage.setAttribute("src", i.url);
+//     // itemContainer.appendChild(itemImage);
+//     // item.appendChild(itemContainer);
+//     // let container = document.createElement("div");
+//     // container.classList.add("container");
+//     // let name = document.createElement("h5");
+//     // name.classList.add("item-name");
+//     // name.innerText = i.name.toUpperCase();
+//     // container.appendChild(name);
+//     // let price = document.createElement("h6");
+//     // price.classList.add("item-price");
+//     // price.innerText = "$" + i.price;
+//     // container.appendChild(price);
 
-    // let description = document.createElement("p");
-    // description.classList.add("item-description");
-    // description.innerText = i.description;
-    // container.appendChild(description);
+//     // let description = document.createElement("p");
+//     // description.classList.add("item-description");
+//     // description.innerText = i.description;
+//     // container.appendChild(description);
 
-    // item.appendChild(container);
-    // document.getElementById("item-info").appendChild(item);
+//     // item.appendChild(container);
+//     // document.getElementById("item-info").appendChild(item);
 
-    document.querySelector("#item-info").innerHTML = output;
+//     document.querySelector("#item-info").innerHTML = output;
 
-    document.querySelector("#item-info").style.display = "block";
-  }
-}
+//     document.querySelector("#item-info").style.display = "block";
+//   }
+// }
