@@ -65,7 +65,6 @@ section.active {
     display: block;
 }
 
-
 .form-container {
     background: rgb(0, 0,0,0.8);
     width: 50%;
@@ -326,8 +325,10 @@ display: grid;
 grid-template-columns: repeat(auto-fit, minmax(350px, auto));
 grid-gap: 50px;
 margin: 50px auto;
-max-width: 1240px;
+max-width: 1440px;
 padding: 20px;
+background-color:lightblue;
+
 
 }
 
