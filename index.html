@@ -9,7 +9,7 @@
 
 <body>
 
-    <!--Navbar-->
+    
     <nav class="navbar">
         <ul>
             <li>
@@ -53,9 +53,11 @@
                     <input id="itemphoto" type="text" name="url" autocomplete="off" required>
                     <label for="itemphoto">Image of Item </label>
                 </div>
-                <button class="btn" type="submit">Add Image</button>
+                  
+                <button class="btn" type="submit">Add Item</button>
                     
-                
+                <button class="btn">Clear</button>
+             
               
               
             </form>
@@ -85,14 +87,14 @@
                 </p>
             </div>
            
-            <div class="btn-box">
+            <div class="btn">
                 <a href="#"> Read More </a>
                
             </div>
-            <div class="image-section">
+        </div>
+        <div class="image-section">
             <img src="/images/home.JPG">
             </div>
-        </div>
            </div>
     </section>
     
@@ -104,18 +106,20 @@
             <button class="btn" id="showbutton" onclick="showCards()">Show all items</button>
             <button class="btn" id="removebutton" onclick="removeCards()">Remove all items</button>
         </div> -->
+        <div class="search-container">
             <div class="search">
                 <h1>All Items</h1>
                 <input type="text" id="find" name=" " placeholder="Search here...." onkeyup="search()">
             </div>
-             <div class="btn-container">
-                      
-            <button class="btn1" class="filter-btn" id="showbutton" onclick="showCards()">All</button>
-            <button class="btn1"  class="filter-btn" id="removebutton" onclick="removeCards()">Remove </button>
-            <button class="btn1"  class="filter-btn"  onclick="filterItems('Electronics')">Electronics</button>
-            <button class="btn1"  class="filter-btn" onclick="filterItems('Groceries')">Groceries</button>
-            <button class="btn1"  class="filter-btn"  onclick="filterItems('Cosmetics')">Cosmetics</button>
+             <div class="btn-container">   
+            <button  class="filter-btn" id="showbutton" > Show All</button>
+            <button   class="filter-btn" id="removebutton">Remove All </button>
+            <button  class="filter-btn" >Electronics</button>
+            <button   class="filter-btn" >Groceries</button>
+            <button   class="filter-btn" >Cosmetics</button>
         </div>
+        </div>
+           
             <div class="products" >
                
             </div>

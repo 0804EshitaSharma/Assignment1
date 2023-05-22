@@ -291,6 +291,7 @@ justify-content: flex-start;
 .about-content{
     float: left;
     width: 55%;
+    text-align: justify;
 }
 .image-section{
     float: right;
@@ -355,9 +356,12 @@ box-shadow: 0 5px 5px rgba(0,0,0,0.2);
     font-size: 28px;
 }
 .product button{
-    margin-top: 40px;
+    /* margin-top: 40px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 50px; */
     cursor: pointer;
    
 }
+ .btn a{
+    text-decoration: none;
+ }
