@@ -7,14 +7,8 @@
 
 body {
     font-family: sans-serif;
-    /* background-color:#081b29 ; */
     background-image: url(https://img.freepik.com/free-vector/blue-white-low-poly-triangle-shapes-background_1035-19007.jpg?w=1800&t=st=1684051357~exp=1684051957~hmac=5726ab63e27e22a925b25cca143b2d6b1cb320727fef22d5b1bb7b56788a0481);
 }
-
-/* h1,
-h2 {
-    font-family: Impact;
-} */
 
 h1 {
     font-size: 40px;
@@ -23,30 +17,6 @@ h1 {
 h2 {
     font-size: 30px;
 }
-
-/* .navbar {
-
-    background-color: black;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-}
-
-.navbar_content {
-    color: rgb(236, 236, 236);
-    text-decoration: none;
-    font-size: 1.4rem;
-
-}
-
-.navbar_content:hover {
-    color: rgb(115, 115, 214);
-
-} */
 
 ul {
 
@@ -87,7 +57,6 @@ section.active {
 .form-container .input-box {
     position: relative;
     margin-top: 20px;
-    /* flex-basis: column; */
 }
 
 .form-container .input-box input {
@@ -178,7 +147,6 @@ section.active {
     height: 100vh;
     background-color: #081b29;
     padding: 0px 10%;
-    /* background: url('images/home.JPG') no-repeat; */
     background-size: cover;
     background-position: center;
 }
@@ -235,9 +203,9 @@ section.active {
 }
 
 .btn-container {
-
     position: relative;
     margin-left: 240px;
+   
 }
 
 .btn {
@@ -267,15 +235,17 @@ section.active {
     cursor: pointer;
     border-radius: 40px;
 }
+.search-container{
+    position: sticky;
+    top: 90px;
+}
 
 .search {
     display: flex;
     justify-content: flex-start;
-    margin: 50px 50px;
+    margin: 20px 50px;
     width: 1200px;
     height: auto;
-    /* background-color: transparent; */
-    /* background-color: #081b29; */
 }
 
 .search input {
@@ -483,11 +453,36 @@ nav ul li a:hover {
        
     }
     .form-container {
-       
         width: 80%;
-     
-        
-       
     }
 
+
 }
+@media screen and (max-width:1083px) {
+    .search input {
+        width: 30%;
+      margin-left:-20px;
+        font-size: 10px;  
+        max-width: 450px;
+    }
+    .search h1 {
+       font-size: 10px;
+       display: none;
+    }
+    .search {
+       flex-direction: column;
+    
+    }
+    .btn-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        grid-gap: 5px;
+        margin: 50px auto;
+    
+    }
+    .btn{
+        margin-bottom: 10px;
+    }
+    
+    
+}    
