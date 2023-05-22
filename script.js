@@ -2,6 +2,7 @@ var allItems = [];
 const links = document.querySelectorAll("nav a");
 const sections = document.querySelectorAll("section");
 
+// Referred from  ChatGPT
 links.forEach((link) => {
   link.addEventListener("click", () => {
     links.forEach((link) => link.classList.remove("active"));
@@ -12,6 +13,7 @@ links.forEach((link) => {
   });
 });
 
+// Referred from https://www.youtube.com/watch?v=o6bLYYStZss
 function showCards() {
   let output = "";
   for (let item of allItems) {
@@ -66,6 +68,7 @@ formElement.addEventListener("clear", (e) => {
   document.getElementById("itemphoto").value = "";
 });
 
+// Referred from https://www.youtube.com/watch?v=hEs3IL6UyvE
 function search() {
   let itemNameToSearch = document.getElementById("find").value.toUpperCase();
   let allItems = document.querySelectorAll(".product");

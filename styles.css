@@ -495,7 +495,9 @@ nav ul li a:hover {
 
 
 }
-
+/* Learned Media Queries from https://www.youtube.com/watch?v=H-AmJSMcNfI 
+https://www.youtube.com/watch?v=s9dvP3_hpDs
+*/
 @media screen and (max-width:1083px) {
     .search input {
         width: 30%;
