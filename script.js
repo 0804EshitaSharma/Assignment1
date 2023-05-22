@@ -108,7 +108,10 @@ window.onload=()=>{
   })
   .then(function (items) {
     allItems = items;
-  });
+  }).then(function(){
+    showCards();
+  } );
+  
 };
 
 function deleteCard(e){
