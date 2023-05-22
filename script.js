@@ -32,7 +32,7 @@ function showCards() {
     output += `
         <div class="product">
         <img src="${item.url}" alt="${item.url}">
-        <p class="title">${item.name}</p>
+        <p class="product-name">${item.name}</p>
         <p class="description">${item.description}</p>
         <p class="price">
         <span> $</span>
@@ -82,10 +82,10 @@ formElement.addEventListener("clear", (e) => {
 
 function search() {
   let itemNameToSearch = document.getElementById("find").value.toUpperCase();
-  let allItems = document.querySelectorAll(".item");
-  let allItemNames = document.querySelectorAll(".item-name");
+  let allItems = document.querySelectorAll(".product");
+  let allItemNames = document.querySelectorAll(".product-name");
   for (var i = 0; i < allItems.length; i++) {
-    let itemName = allItems[i].querySelector(".item-name");
+    let itemName = allItems[i].querySelector(".product-name");
     let value =
       itemName.innerHTML || itemName.innerText || itemName.textContent;
     if (value.toUpperCase().indexOf(itemNameToSearch) > -1) {
