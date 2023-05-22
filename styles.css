@@ -334,6 +334,10 @@ section.active {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 }
+/* 
+.products::-webkit-scrollbar{
+    display: none;
+} */
 
 .products-wrap {
     display: flex;
@@ -343,12 +347,14 @@ section.active {
 
 .scroll-img {
     height: 50px;
+   
 }
 
 .product {
     padding: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
+    min-width: 300px;
     background-color: lightblue;
     max-height: 500px;
 
@@ -359,10 +365,10 @@ section.active {
     margin: auto auto;
     display: block;
 }
-
+/* 
 .products ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .product .product-name {
     text-align: center;
