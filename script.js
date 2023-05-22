@@ -34,6 +34,7 @@ function showCards() {
         <img src="${item.url}" alt="${item.url}">
         <p class="product-name">${item.name}</p>
         <p class="description">${item.description}</p>
+        <p class="category">${item.category}</p>
         <p class="price">
         <span> $</span>
         <span>${item.price}</span>
@@ -100,42 +101,6 @@ function search() {
   }
 }
 
-// function showElectronicCards() {
-//   // let allItems1 = document.querySelectorAll('.item');
-//   let allElectronicItems = allItems.filter(
-//     (item) => item.category === "Electronics"
-//   );
-
-//   for (var i = 0; i < allElectronicItems.length; i++) {
-//     allElectronicItems[i].style.display = "";
-//   }
-// }
-
-// function filterItems(value) {
-    
-// //   let buttons = document.querySelectorAll(".btn");
-// //   buttons.forEach((b) => {
-// //     console.error(b.innerText);
-// //     if (b.innerText.toUpperCase() == value.toUpperCase()) {
-// //       b.classList.add("active-button");
-// //     } else {
-// //       b.classList.remove("active-button");
-// //     }
-// //   });
-//   let allItems = document.querySelectorAll(".item");
-//   allItems.forEach((b) => {
-//     if (value == "All") {
-//       b.classList.remove("hide");
-//     } else {
-//       if (b.classList.contains(value)) {
-//         b.classList.remove("hide");
-//       } else {
-//         b.classList.add("hide");
-//       }
-//     }
-//   });
-// }
-
 window.onload=()=>{
    allItems = fetch("data/mockdata.json")
   .then(function (response) {
@@ -145,56 +110,6 @@ window.onload=()=>{
     allItems = items;
   });
 };
-
-// function showCards() {
-//   let output = "";
-//   for (let item of allItems) {
-//     output += `
-//         <div class="item">
-//         <img class="item-image" src="${item.url}" alt="${item.url}">
-//         <p class="item-name">${item.name}</p>
-//         <p class="item-description">${item.description}</p>
-//         <p class="item-price">
-//         <span> $</span>
-//         <span>${item.price}</span>
-//         <span> CAD </span>
-//         </p>
-//         <button onclick="removeitem(${item})">Delete Item</button>
-//         </div>
-//         `;
-//     // let item = document.createElement("div");
-//     // console.error( i.category);
-//     // item.classList.add("item", i.category.toString(),"hide");
-//     // let itemContainer = document.createElement("div");
-//     // itemContainer.classList.add("item-container");
-//     // let itemImage = document.createElement("img");
-//     // itemImage.setAttribute("src", i.url);
-//     // itemContainer.appendChild(itemImage);
-//     // item.appendChild(itemContainer);
-//     // let container = document.createElement("div");
-//     // container.classList.add("container");
-//     // let name = document.createElement("h5");
-//     // name.classList.add("item-name");
-//     // name.innerText = i.name.toUpperCase();
-//     // container.appendChild(name);
-//     // let price = document.createElement("h6");
-//     // price.classList.add("item-price");
-//     // price.innerText = "$" + i.price;
-//     // container.appendChild(price);
-
-//     // let description = document.createElement("p");
-//     // description.classList.add("item-description");
-//     // description.innerText = i.description;
-//     // container.appendChild(description);
-
-//     // item.appendChild(container);
-//     // document.getElementById("item-info").appendChild(item);
-
-//     document.querySelector("#item-info").innerHTML = output;
-
-//     document.querySelector("#item-info").style.display = "block";
-//   }
-// }
 
 function deleteCard(e){
   let allItems = document.querySelectorAll(".product");
@@ -208,4 +123,19 @@ function deleteCard(e){
         }
       }
 
+}
+
+function filterItems(value) {
+    
+  let allItems = document.querySelectorAll(".product");
+  for (var i = 0; i < allItems.length; i++) {
+    let itemCategory = allItems[i].querySelector(".category");
+    let itemCategoryValue= itemCategory.innerHTML ||  itemCategory.innerText ||  itemCategory.textContent;
+    if (value.toUpperCase() !==  itemCategoryValue.toUpperCase()) {
+      allItems[i].style.display = "none";
+    }
+    else{
+      allItems[i].style.display = "";
+    }
+  }
 }
