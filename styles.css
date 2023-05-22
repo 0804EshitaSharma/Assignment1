@@ -64,50 +64,7 @@ section {
 section.active {
     display: block;
 }
-.item-container{
-    /* background-color:brown; */
-    display: grid;
-    grid-template-columns: auto auto auto;
-grid-column-gap: 1.5em;
-padding: 2em 0;
-    
-    
 
-}
-.item {
-    /* display: grid;
-    max-width: 400px;
-    padding: 20px; */
-    background-color: blue;
-    width: 40%;
-    margin: 20px auto;
-   
-}
-
-/* .item-image{
-width: 100%;
-display: block;
-} */
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 20%;
-
-}
-
-.item-name {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: 800;
-}
-
-.item-description {
-    padding: 0 20px 20px 20px;
-    line-height: 22px;
-}
 
 .form-container {
     background: rgb(0, 0,0,0.8);
@@ -251,27 +208,10 @@ img {
 }
 
 .btn-container {
-    /* width: 345px;
-    height:50px; */
 
  position: relative;
  margin-left: 240px;
-
- /* margin: auto auto; */
-    /* display: flex;  */
-     /* justify-content: space-between; */
-     /* background-color: #000; */
 }
-/* .btn-container-1 {
-    margin: auto auto;
-    display: inline-flex; 
-    justify-content: space-between;
-    background:blue;
-} */
-
-/* .filter-btn{
-    border-radius: 40px;
-} */
 
 .btn{
 background-color: #00abf0;
@@ -379,4 +319,45 @@ justify-content: flex-start;
 .active-button{
     background-color: #00abf0;
     color: white;
+}
+.products{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+grid-gap: 50px;
+margin: 50px auto;
+max-width: 1240px;
+padding: 20px;
+
+}
+
+.product{
+padding: 10px;
+box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.product img {
+    width:100%;
+    display: block;
+}
+.product .title{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.product .description {
+    padding: 0 20px 20px 20px;
+    line-height: 22px;
+} 
+.product .price{
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+}
+.product button{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    cursor: pointer;
+   
 }
