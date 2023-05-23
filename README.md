@@ -71,6 +71,8 @@ Open with Live server
  - https://www.youtube.com/watch?v=H62pLIoqK28
  - https://www.w3schools.com/cssref/sel_nth-child.php
  - https://www.youtube.com/watch?v=gzXyRa7jwk4
+ - https://www.youtube.com/watch?v=HMqB4aASr0E
+ - https://www.youtube.com/watch?v=s9dvP3_hpDs
  - Referred navigation workflow between sections using ChatGPT.
 
 
