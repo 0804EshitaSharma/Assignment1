@@ -564,68 +564,6 @@ nav ul li a:hover {
     .form-container {
         width: 80%;
     }
-
-
-}
-
-/* Learned Media Queries from:
- https://www.youtube.com/watch?v=H-AmJSMcNfI 
- https://www.youtube.com/watch?v=s9dvP3_hpDs
-
-*/
-@media screen and (max-width:1083px) {
-    .search input {
-        width: 30%;
-        margin-left: -20px;
-        font-size: 10px;
-        max-width: 450px;
-    }
-
-    .search h1 {
-        font-size: 10px;
-        display: none;
-    }
-
-    .search {
-        flex-direction: column;
-
-    }
-
-    .btn-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-        grid-gap: 5px;
-        margin: 50px auto;
-
-    }
-
-    .btn {
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-
-    .products {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-        max-width: 1440px;
-        padding: 10px;
-        grid-auto-flow: column;
-        overflow-y: auto;
-        overscroll-behavior-inline: contain;
-    }
-
-    .products-wrap {
-        position: fixed;
-        top: 260px;
-    }
-
-
-
-}
-
-@media (max-width:768px) {
-
-
     .about-container {
         display: block;
         align-content: center;
@@ -660,5 +598,61 @@ nav ul li a:hover {
     }
 
 
+}
 
+/* Learned Media Queries from:
+ https://www.youtube.com/watch?v=H-AmJSMcNfI 
+ https://www.youtube.com/watch?v=s9dvP3_hpDs
+
+*/
+@media screen and (max-width:1083px) {
+    .search input {
+        width: 30%;
+        margin-left: -20px;
+        font-size: 10px;
+        max-width: 450px;
+    }
+
+    .search h1 {
+        font-size: 10px;
+        display: none;
+    }
+
+    .search {
+        flex-direction: column;
+
+    }
+
+    .btn-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1083px;
+        padding: 4px;
+        grid-auto-flow: column;
+        overflow-y: auto;
+        overscroll-behavior-inline: contain;
+        margin-left: 10px;
+
+    }
+
+    .btn {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+        max-width: 1440px;
+        padding: 10px;
+        grid-auto-flow: column;
+        overflow-y: auto;
+        overscroll-behavior-inline: contain;
+    }
+
+    .products-wrap {
+        position: fixed;
+        top: 260px;
+    }
 }
