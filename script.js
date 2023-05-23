@@ -57,6 +57,7 @@ formElement.addEventListener("submit", (e) => {
   resultingHomeSection.classList.remove("active");
   var resultingDashboardSection = document.getElementById("dashboard");
   resultingDashboardSection.classList.add("active");
+  showAllItems();
 });
 
 formElement.addEventListener("reset", (e) => {
