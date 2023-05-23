@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <!-- Learned about meta tag from  https://www.w3schools.com/tags/tag_meta.asp -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inventory Website</title>
   <link rel="stylesheet" href="styles.css" />
@@ -50,7 +51,7 @@
     </div>
   </section>
 
-  <!-- Referred from Youtube tutorial https://www.youtube.com/watch?v=HMqB4aASr0E -->
+  <!-- Learned some concepts from Youtube tutorial https://www.youtube.com/watch?v=HMqB4aASr0E -->
   <section id="about" class="about-section">
     <div class="about-container">
       <div class="about-content">
@@ -105,18 +106,18 @@
     </div>
   </section>
 
-  <!-- Referred from Youtube tutorial https://www.youtube.com/watch?v=hEs3IL6UyvE -->
+  <!-- Learned some concepts from Youtube tutorial https://www.youtube.com/watch?v=hEs3IL6UyvE -->
   <section id="dashboard" class="dashboard">
     <div class="search-container">
       <div class="search">
         <h1>All Items</h1>
-        <input type="text" id="find" name=" " placeholder="Search here...." onkeyup="search()" />
+        <input type="text" id="itemsearch" name=" " placeholder="Search here...." onkeyup="search()" />
       </div>
       <div class="btn-container">
-        <button class="btn" id="showbutton" onclick="showCards()">
+        <button class="btn" id="showbutton" onclick="showAllItems()">
           Show All
         </button>
-        <button class="btn" id="removebutton" onclick="removeCards()">
+        <button class="btn" id="removebutton" onclick="removeAllItems()">
           Remove All
         </button>
         <button class="btn" onclick="filterItems('Electronics')">
@@ -131,8 +132,6 @@
       </div>
     </div>
 <div class="products-wrap">
-
-
     <div class="products"></div>
   </div>
   </section>

@@ -1,23 +1,23 @@
 var allItems = [];
-const links = document.querySelectorAll("nav a");
-const sections = document.querySelectorAll("section");
+const allLinks = document.querySelectorAll("nav a");
+const allSections = document.querySelectorAll("section");
 
 // Referred from  ChatGPT
-links.forEach((link) => {
+allLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    links.forEach((link) => link.classList.remove("active"));
-    sections.forEach((section) => section.classList.remove("active"));
+    allLinks.forEach((link) => link.classList.remove("active"));
+    allSections.forEach((section) => section.classList.remove("active"));
     link.classList.add("active");
-    const targetSection = document.querySelector(link.getAttribute("href"));
-    targetSection.classList.add("active");
+    const resultingSection = document.querySelector(link.getAttribute("href"));
+    resultingSection .classList.add("active");
   });
 });
 
 // Referred from https://www.youtube.com/watch?v=o6bLYYStZss
-function showCards() {
-  let output = "";
+function showAllItems() {
+  let result = "";
   for (let item of allItems) {
-    output += `
+   result += `
         <div class="product">
         <img src="${item.url}" alt="${item.url}">
         <p class="product-name">${item.name}</p>
@@ -28,16 +28,16 @@ function showCards() {
         <span>${item.price}</span>
         <span> CAD </span>
         </p>
-        <button class="form-btn" onclick= 'deleteCard("${item.name}" )' >Delete Item</button>
+        <button class="form-btn" onclick= 'deleteItem("${item.name}" )' >Delete Item</button>
         </div>
         `;
 
-    document.querySelector(".products").innerHTML = output;
+    document.querySelector(".products").innerHTML = result;
     document.querySelector(".products").style.display = "";
   }
 }
 
-function removeCards() {
+function removeAllItems() {
   const products = document.querySelector(".products");
   products.style.display = "none";
 }
@@ -52,10 +52,10 @@ formElement.addEventListener("submit", (e) => {
   document.getElementById("itemdescription").value = "";
   document.getElementById("itemprice").value = "";
   document.getElementById("itemphoto").value = "";
-  var targetSection1 = document.getElementById("home");
-   targetSection1.classList.remove("active");
-   var targetSection2 = document.getElementById("dashboard");
-   targetSection2.classList.add("active");
+  var resultingHomeSection = document.getElementById("home");
+  resultingHomeSection.classList.remove("active");
+  var resultingDashboardSection = document.getElementById("dashboard");
+  resultingDashboardSection.classList.add("active");
 });
 
 formElement.addEventListener("reset", (e) => {
@@ -68,13 +68,13 @@ formElement.addEventListener("reset", (e) => {
 
 // Referred from https://www.youtube.com/watch?v=hEs3IL6UyvE
 function search() {
-  let itemNameToSearch = document.getElementById("find").value.toUpperCase();
+  let itemNameToSearch = document.getElementById("itemsearch").value.toUpperCase();
   let allItems = document.querySelectorAll(".product");
   for (var i = 0; i < allItems.length; i++) {
     let itemName = allItems[i].querySelector(".product-name");
-    let value =
+    let valueOfItemName =
       itemName.innerHTML || itemName.innerText || itemName.textContent;
-    if (value.toUpperCase().indexOf(itemNameToSearch) > -1) {
+    if (valueOfItemName.toUpperCase().indexOf(itemNameToSearch) > -1) {
       allItems[i].style.display = "";
     } else {
       allItems[i].style.display = "none";
@@ -91,11 +91,11 @@ window.onload = () => {
       allItems = items;
     })
     .then(function () {
-      showCards();
+      showAllItems();
     });
 };
 
-function deleteCard(e) {
+function deleteItem(e) {
   let allItems = document.querySelectorAll(".product");
   for (var i = 0; i < allItems.length; i++) {
     let itemName = allItems[i].querySelector(".product-name");
