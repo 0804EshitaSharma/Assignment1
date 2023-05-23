@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <!-- Learned about meta tag from  https://www.w3schools.com/tags/tag_meta.asp -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inventory Website</title>
   <link rel="stylesheet" href="styles.css" />
@@ -43,35 +44,56 @@
         </div>
         <div class="button-box">
           <button class="form-btn" type="submit">Add Item</button>
-          <button class="form-btn" type="clear">Clear</button>
+          <button class="form-btn" type="reset">Clear</button>
         </div>
 
       </form>
     </div>
   </section>
 
-  <!-- Referred from Youtube tutorial https://www.youtube.com/watch?v=HMqB4aASr0E -->
+  <!-- Learned some concepts from Youtube tutorial https://www.youtube.com/watch?v=HMqB4aASr0E -->
   <section id="about" class="about-section">
     <div class="about-container">
       <div class="about-content">
         <h1>Hi, I am Eshita Sharma</h1>
-        <h3>Student at UBC</h3>
+        <h3>Student at UBC & Developer </h3>
         <div class="content">
           <p>
-            This is an Inventory Website with features using which where users
-            can add new items, Can view, search using filter Items from
-            Dashboard. This a project is built using HTML, CSS and vanilla
-            Javascript.This is an Inventory Website with features using which
-            where users can add new items, Can view, search using filter Items
-            from Dashboard. This a project is built using HTML, CSS and
-            vanilla Javascript. This is an Inventory Website with features
-            using which where users can add new items, Can view, search using
-            filter Items from Dashboard. This a project is built using HTML,
-            CSS and vanilla Javascript.This is an Inventory Website with
-            features using which where users can add new items, Can view,
-            search using filter Items from Dashboard.This a project is built
-            using HTML, CSS and vanilla Javascript.
-          </p>
+           I'm currently in my 2nd year of MEng in Electrical and Computer Engineering at UBC and as a Developer, I have some hands on expereience 
+           on technologies like Angular, Java, C++ and Spring Boot. I love to constantly enhance my skills by picking up new stuff. I am exicted to learn <strong>
+            MERN Stack
+           </strong>
+            with the help of this Course. And I have started this journey by building this website.
+            This is a simple Inventory Management Website  which alllow
+            users to add, view, search and delete items. Following are the features that it currently supports.</p>
+            <h3>Features:</h3>
+            <ul>
+              <li>
+               <p> Navbar with About, Home and Dashboard Sections.</p>
+              </li>
+              <li>
+              <p>Search and Filter Items using search bar.</p>
+              </li>
+              <li>
+               <p> Form to add new Item to Dashboard.</p>
+               </li>
+               <li>
+              <p>Show All / Delete All Items along with delete individual items.</p>
+              </li>
+            </ul>
+            <h3>Technology used:</h3>
+            <ul>
+              <li>
+               <p>HTML</p> 
+              </li>
+              <li>
+              <p>CSS</p> 
+              </li>
+              <li>
+               <p>Javascript</p> 
+               </li>
+            </ul>
+          
         </div>
 
         <div class="btn">
@@ -84,18 +106,18 @@
     </div>
   </section>
 
-  <!-- Referred from Youtube tutorial https://www.youtube.com/watch?v=hEs3IL6UyvE -->
+  <!-- Learned some concepts from Youtube tutorial https://www.youtube.com/watch?v=hEs3IL6UyvE -->
   <section id="dashboard" class="dashboard">
     <div class="search-container">
       <div class="search">
         <h1>All Items</h1>
-        <input type="text" id="find" name=" " placeholder="Search here...." onkeyup="search()" />
+        <input type="text" id="itemsearch" name=" " placeholder="Search here...." onkeyup="search()" />
       </div>
       <div class="btn-container">
-        <button class="btn" id="showbutton" onclick="showCards()">
+        <button class="btn" id="showbutton" onclick="showAllItems()">
           Show All
         </button>
-        <button class="btn" id="removebutton" onclick="removeCards()">
+        <button class="btn" id="removebutton" onclick="removeAllItems()">
           Remove All
         </button>
         <button class="btn" onclick="filterItems('Electronics')">
@@ -110,10 +132,7 @@
       </div>
     </div>
 <div class="products-wrap">
-
-
     <div class="products"></div>
-    <img id="next-btn" class="scroll-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAAD/CAMAAAB2B+IJAAAAXVBMVEX29vYAAAD5+fnw8PD09PTv7+/o6Ojr6+taWlpAQEDm5uZSUlJHR0c1NTVWVlYxMTE6OjpNTU1fX19CQkIrKytiYmIlJSUgICDg4OAaGhpmZmYyMjIMDAyPj49ubm6HzNVjAAADuElEQVR4nO2d63baMBCEpZXpJSEhKcYkIen7P2aBNhzAYM+PxsyOdp6A7+zujJBtKaVQKBQKhb5Cdusf8B9k5cU/hqX79zvvGFuInF+dY+whvGNY85izdwxrfuR/6tyOuJUDRM6tUwwrv3L2jnEG4ROjB+ERw5oehD+MI3c6VufKcC09XoLIee0I4yrEFuObF4wBCD8Yli7OhC+MEQgfGFfc6VgOnKofdn217Bj2MQ6R84I9/po3BQxLVWGQz4alFYLBPuIoBnlumAF2u80Ncoxko9EXGNMpMIgEjriI4YrEnwjGJjCmkExTQU61YDfcsc2Ev2q/k2Ng8aeCwd5UNrBX6KkaIhgaTYU5Fb/hQrnBn+IQxgM7xqUnfboY9LMBjfhGA2PBnhtDT/wcYWApTo8hUo3AIJLMbECGKxJ/9Bjjj/Z3egqMKQRi0DcVZrgP9E6FGe6MHeNeoxqBwSMUQ2M2NvTV0DDcBsJ4EsFgT/G6qhEYU8gakdx4rgiDv6mqwmBvKhEMkRHHDJd/NiCMn4ExhSrDoB9xDcMVwcByQ6SpAmMSyWDMIYxCjgH+baKvhkhTaWAUCGOpgUFfDZGmAjHYDRfMDfpqaGBU5VT8GFBTLUVGXASDvalE4k9lxEUwqhpxeowl1FT0GFj8aczGPDCmkM0wDPbZAJeGs1v/0GHZHUKRf1MXw2aQ3c7LrX/okGAI5lJIDDcKQW20VhTaSWEdhS7NGwEIiUpwr2cDgkUSf1ZBiyWHCHcikQaEwr6HxG65hsWCj+0VIMhnIiBIJPEQTOKtWg2L1Qi7GGwO1dRO7O6kAKHw3qYVge+SJD6uEoFQGGyFjxU0KhEQJNKYCQkIhfNAJL6xBw+YYU/sgOCQxHlFEof1SRzVJ3EaC1iJmIkvF9pO5BDY4ZXcM4HlBHklJMJO4QztgGAReiatAgT3nQtgTkhAcJ/UHBAsEhlsgburJO68EIGALqYjX3YoXBIocbmQxB2gEvexStyNK3H9WU2VIIdQuEtd4l57MLG5L1nWWHZIQCjc2Y0ONjeEQRDsaycoJzoFCPKw01iK19NOHXc7YRZL3k5phUCQ54QGxBsCwb3sSA0EwV2JZB8CECkVwJ9adghkZ7yjhwC2C9bUOfGpEQwfECMYXiAGMfxADGBwr2LPdQWD32JPdXETxxvE7lPOHsbixRvEDmPlH6JXDZ8QZxitU4iTNZWHtdM1Hd6aXTuGOLxK9Ooq7PraY3iH2L+d9u4eYudUbt3pRBIQoVAoFKpSfwDCEkcLhu4poQAAAABJRU5ErkJggg==">
   </div>
   </section>
 

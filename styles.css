@@ -1,3 +1,10 @@
+/* Learned Some Specific Styling Like CSS GRID, Sticky Nav bar , hide default scroll feature from several tutorials : 
+https://www.w3schools.com/css/default.asp
+https://www.youtube.com/watch?v=gzXyRa7jwk4
+https://www.youtube.com/watch?v=o6bLYYStZss
+
+
+*/
 * {
     margin: 0px;
     padding: 0;
@@ -12,20 +19,13 @@ body {
 
 h1 {
     font-size: 40px;
+    letter-spacing: 1px;
+    
 }
 
 h2 {
     font-size: 30px;
-}
-
-ul {
-
-    list-style: none;
-}
-
-li {
-    float: left;
-    padding: 2rem;
+    letter-spacing: 1px;
 }
 
 section {
@@ -50,8 +50,6 @@ section.active {
 
 .form-container h1 {
     color: #fff;
-
-
 }
 
 .form-container .input-box {
@@ -87,6 +85,7 @@ section.active {
 
 }
 
+/* Learned this  way of styling form inputs from tutorial https://www.youtube.com/watch?v=H62pLIoqK28 */
 .form-container .input-box input:focus~label,
 .form-container .input-box input:valid~label {
     top: -20px;
@@ -109,6 +108,7 @@ section.active {
 
 }
 
+/* Learned this  way of styling form inputs from tutorial https://www.youtube.com/watch?v=H62pLIoqK28 */
 .form-container .input-box textarea:focus~label,
 .form-container .input-box textarea:valid~label {
     top: -20px;
@@ -197,6 +197,7 @@ section.active {
     color: #081b29;
 }
 
+/* Learned this way of Styling from https://www.w3schools.com/cssref/sel_nth-child.php */
 .btn-box a:nth-child(2) {
     background: transparent;
     color: #00abf0;
@@ -224,8 +225,6 @@ section.active {
 
 .btn1 {
     background-color: transparent;
-
-    /* color: white; */
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -308,6 +307,24 @@ section.active {
     font-size: 18px;
     line-height: 1.5;
 }
+.about-content .content h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #00abf0;
+}
+.about-content h3{
+    margin-top: 10px;
+    color: #00abf0;
+}
+.about-section .btn {
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 3px;
+
+}
 
 @media screen and (max-width:768px) {
     .about-container {
@@ -335,6 +352,11 @@ section.active {
     overscroll-behavior-inline: contain;
 }
 
+/* https://www.youtube.com/watch?v=gzXyRa7jwk4 */
+.products::-webkit-scrollbar{
+    display: none;
+}
+
 .products-wrap {
     display: flex;
     align-items: center;
@@ -343,12 +365,14 @@ section.active {
 
 .scroll-img {
     height: 50px;
+   
 }
 
 .product {
     padding: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
+    min-width: 300px;
     background-color: lightblue;
     max-height: 500px;
 
@@ -358,10 +382,6 @@ section.active {
     width: 100%;
     margin: auto auto;
     display: block;
-}
-
-.products ::-webkit-scrollbar {
-    display: none;
 }
 
 .product .product-name {
@@ -384,11 +404,7 @@ section.active {
 }
 
 .product button {
-    /* margin-top: 40px;
-    margin-bottom: 10px;
-    margin-left: 50px; */
     cursor: pointer;
-
 }
 
 .btn a {
@@ -461,6 +477,12 @@ nav ul li a:hover {
 
 }
 
+/* Learned Media Queries from:
+ https://www.youtube.com/watch?v=H-AmJSMcNfI 
+ https://www.youtube.com/watch?v=s9dvP3_hpDs
+
+*/
+
 @media screen and (max-width:768px) {
     nav ul {
         height: 130px;
@@ -503,8 +525,10 @@ nav ul li a:hover {
 
 
 }
-/* Learned Media Queries from https://www.youtube.com/watch?v=H-AmJSMcNfI 
-https://www.youtube.com/watch?v=s9dvP3_hpDs
+/* Learned Media Queries from:
+ https://www.youtube.com/watch?v=H-AmJSMcNfI 
+ https://www.youtube.com/watch?v=s9dvP3_hpDs
+
 */
 @media screen and (max-width:1083px) {
     .search input {
