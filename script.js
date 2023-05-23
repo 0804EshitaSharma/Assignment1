@@ -70,7 +70,6 @@ formElement.addEventListener("reset", (e) => {
 function search() {
   let itemNameToSearch = document.getElementById("find").value.toUpperCase();
   let allItems = document.querySelectorAll(".product");
-  let allItemNames = document.querySelectorAll(".product-name");
   for (var i = 0; i < allItems.length; i++) {
     let itemName = allItems[i].querySelector(".product-name");
     let value =
@@ -98,8 +97,6 @@ window.onload = () => {
 
 function deleteCard(e) {
   let allItems = document.querySelectorAll(".product");
-  const allItemNames = document.querySelector(".product-name");
-
   for (var i = 0; i < allItems.length; i++) {
     let itemName = allItems[i].querySelector(".product-name");
     let value =
@@ -125,9 +122,3 @@ function filterItems(value) {
     }
   }
 }
-// let scrollBar= document.querySelector(".product");
-// let btn= document.getElementById("next-btn");
-// scrollBar.addEventListener("wheel",(e)=>{
-// e.preventDefault();
-// scrollBar.scrollLeft+=e.deltaY;
-// });

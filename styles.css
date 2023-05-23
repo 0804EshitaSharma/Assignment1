@@ -20,16 +20,6 @@ h2 {
     font-size: 30px;
     letter-spacing: 1px;
 }
-/* 
-ul {
-
-    list-style: none;
-} */
-/* 
-li {
-    float: left;
-    padding: 2rem;
-} */
 
 section {
     display: none;
@@ -53,8 +43,6 @@ section.active {
 
 .form-container h1 {
     color: #fff;
-
-
 }
 
 .form-container .input-box {
@@ -354,10 +342,10 @@ border-radius: 3px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 }
-/* 
+
 .products::-webkit-scrollbar{
     display: none;
-} */
+}
 
 .products-wrap {
     display: flex;
@@ -385,10 +373,6 @@ border-radius: 3px;
     margin: auto auto;
     display: block;
 }
-/* 
-.products ::-webkit-scrollbar {
-    display: none;
-} */
 
 .product .product-name {
     text-align: center;
@@ -410,11 +394,7 @@ border-radius: 3px;
 }
 
 .product button {
-    /* margin-top: 40px;
-    margin-bottom: 10px;
-    margin-left: 50px; */
     cursor: pointer;
-
 }
 
 .btn a {
