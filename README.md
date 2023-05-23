@@ -58,7 +58,7 @@ Open with Live server
 ```
 
 
-## Acknowledgements
+## Acknowledgements/Citations
 
  - [Awesome HTML, CSS and Javascript Tutorials](https://www.w3schools.com/default.asp)
 
@@ -66,13 +66,14 @@ Open with Live server
   - [Awesome Youtube Tutorials on Media Queries](https://www.youtube.com/watch?v=H-AmJSMcNfI)
 
  - [Awesome Youtube Tutorials on Horizontal Scroll Styling](https://www.youtube.com/watch?v=gzXyRa7jwk4)
- 
- ## Other Acknowledgements
 
  - https://www.youtube.com/watch?v=o6bLYYStZss
  - https://www.youtube.com/watch?v=H62pLIoqK28
  - https://www.w3schools.com/cssref/sel_nth-child.php
  - https://www.youtube.com/watch?v=gzXyRa7jwk4
+ - https://www.youtube.com/watch?v=HMqB4aASr0E
+ - https://www.youtube.com/watch?v=s9dvP3_hpDs
+ - Referred navigation workflow between sections using ChatGPT.
 
 
 
