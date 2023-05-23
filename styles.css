@@ -14,6 +14,7 @@ https://www.youtube.com/watch?v=o6bLYYStZss
 
 body {
     font-family: sans-serif;
+    background: no-repeat;
     background-image: url(https://img.freepik.com/free-vector/blue-white-low-poly-triangle-shapes-background_1035-19007.jpg?w=1800&t=st=1684051357~exp=1684051957~hmac=5726ab63e27e22a925b25cca143b2d6b1cb320727fef22d5b1bb7b56788a0481);
 }
 
@@ -279,9 +280,10 @@ section.active {
 
 .about-container {
     width: 80%;
-    display: block;
+    display: flex;
     margin: auto;
     padding-top: 100px;
+   justify-content: space-between;
 
 }
 
@@ -292,7 +294,6 @@ section.active {
 }
 
 .image-section {
-    float: right;
     width: 40%;
 }
 
@@ -326,14 +327,6 @@ border-radius: 3px;
 
 }
 
-@media screen and (max-width:768px) {
-    .about-container {
-        width: 80%;
-        display: block;
-        margin: auto;
-        padding-top: 50px;
-    }
-}
 
 .active-button {
     background-color: #00abf0;
@@ -483,7 +476,7 @@ nav ul li a:hover {
 
 */
 
-@media screen and (max-width:768px) {
+@media (min-width:300px) and (max-width:768px) {
     nav ul {
         height: 130px;
         flex-direction: column;
@@ -491,14 +484,6 @@ nav ul li a:hover {
         width: 100%;
 
     }
-
-    .about-container {
-        width: 80%;
-        display: block;
-        margin: auto;
-        padding-top: 50px;
-    }
-
     .form-content {
         margin-top: 20px;
         width: 100%;
@@ -571,6 +556,42 @@ nav ul li a:hover {
         overflow-y: auto;
         overscroll-behavior-inline: contain;
     }
+
+
+}
+
+@media  (max-width:768px) {
+   
+
+    .about-container {
+        display: block;
+        align-content: center;
+        margin: auto auto;
+    }
+    .about-content h1{
+        font-size: 20px;
+        margin: auto auto;
+    }
+    
+    .about-content .content p {
+        margin-top: 10px;
+        font-size: 10px;
+        
+    }
+    .about-content .content h3 {
+        
+        font-size: 20px;
+    
+    }
+    .about-section .btn {
+     padding: 4px;
+    
+    }
+    .image-section{
+        display: block;
+
+    }
+    
 
 
 }
