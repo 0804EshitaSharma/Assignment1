@@ -564,6 +564,38 @@ nav ul li a:hover {
     .form-container {
         width: 80%;
     }
+    .about-container {
+        display: block;
+        align-content: center;
+        margin: auto auto;
+    }
+
+    .about-content h1 {
+        font-size: 20px;
+        margin: auto auto;
+    }
+
+    .about-content .content p {
+        margin-top: 10px;
+        font-size: 10px;
+
+    }
+
+    .about-content .content h3 {
+
+        font-size: 20px;
+
+    }
+
+    .about-section .btn {
+        padding: 4px;
+
+    }
+
+    .image-section {
+        display: block;
+
+    }
 
 
 }
@@ -618,47 +650,4 @@ nav ul li a:hover {
         position: fixed;
         top: 260px;
     }
-
-
-
-}
-
-@media (max-width:768px) {
-
-
-    .about-container {
-        display: block;
-        align-content: center;
-        margin: auto auto;
-    }
-
-    .about-content h1 {
-        font-size: 20px;
-        margin: auto auto;
-    }
-
-    .about-content .content p {
-        margin-top: 10px;
-        font-size: 10px;
-
-    }
-
-    .about-content .content h3 {
-
-        font-size: 20px;
-
-    }
-
-    .about-section .btn {
-        padding: 4px;
-
-    }
-
-    .image-section {
-        display: block;
-
-    }
-
-
-
 }
