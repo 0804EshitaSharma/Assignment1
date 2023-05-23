@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- <!-- Learned about meta tag from  https://www.w3schools.com/tags/tag_meta.asp -->
+  <!-- Learned about meta tag from  https://www.w3schools.com/tags/tag_meta.asp -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inventory Website</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-   <!-- Referred from  w3schools https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_nav -->
+  <!-- Referred from  w3schools https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_nav -->
   <nav>
     <ul>
       <li>
@@ -21,7 +23,7 @@
       </li>
     </ul>
   </nav>
- <!-- Referred from  Youtube tutorial  https://www.youtube.com/watch?v=H62pLIoqK28 -->
+  <!-- Referred from  Youtube tutorial  https://www.youtube.com/watch?v=H62pLIoqK28 -->
   <section id="home" class="main">
     <div class="form-container">
       <h1 class="form-heading">Item Form</h1>
@@ -37,6 +39,17 @@
         <div class="input-box">
           <input id="itemprice" name="price" type="number" autocomplete="off" required />
           <label for="itemprice">Item Price</label>
+        </div>
+        <div class="select-box">
+
+          <select id="itemcategory" name="category" required>
+            <option value="Category">Choose a Category----</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Groceries"> Groceries</option>
+            <option value="Cosmetics">Cosmetics</option>
+          </select>
+          <label for="itemcategory">Item Category </label>
+
         </div>
         <div class="input-box">
           <input id="itemphoto" type="text" name="url" autocomplete="off" required />
@@ -59,41 +72,43 @@
         <h3>Student at UBC & Developer </h3>
         <div class="content">
           <p>
-           I'm currently in my 2nd year of MEng in Electrical and Computer Engineering at UBC and as a Developer, I have some hands on expereience 
-           on technologies like Angular, Java, C++ and Spring Boot. I love to constantly enhance my skills by picking up new stuff. I am exicted to learn <strong>
-            MERN Stack
-           </strong>
+            I'm currently in my 2nd year of MEng in Electrical and Computer Engineering at UBC and as a Developer, I
+            have some hands on expereience
+            on technologies like Angular, Java, C++ and Spring Boot. I love to constantly enhance my skills by picking
+            up new stuff. I am exicted to learn <strong>
+              MERN Stack
+            </strong>
             with the help of this Course. And I have started this journey by building this website.
-            This is a simple Inventory Management Website  which alllow
+            This is a simple Inventory Management Website which alllow
             users to add, view, search and delete items. Following are the features that it currently supports.</p>
-            <h3>Features:</h3>
-            <ul>
-              <li>
-               <p> Navbar with About, Home and Dashboard Sections.</p>
-              </li>
-              <li>
+          <h3>Features:</h3>
+          <ul>
+            <li>
+              <p> Navbar with About, Home and Dashboard Sections.</p>
+            </li>
+            <li>
               <p>Search and Filter Items using search bar.</p>
-              </li>
-              <li>
-               <p> Form to add new Item to Dashboard.</p>
-               </li>
-               <li>
+            </li>
+            <li>
+              <p> Form to add new Item to Dashboard.</p>
+            </li>
+            <li>
               <p>Show All / Delete All Items along with delete individual items.</p>
-              </li>
-            </ul>
-            <h3>Technology used:</h3>
-            <ul>
-              <li>
-               <p>HTML</p> 
-              </li>
-              <li>
-              <p>CSS</p> 
-              </li>
-              <li>
-               <p>Javascript</p> 
-               </li>
-            </ul>
-          
+            </li>
+          </ul>
+          <h3>Technology used:</h3>
+          <ul>
+            <li>
+              <p>HTML</p>
+            </li>
+            <li>
+              <p>CSS</p>
+            </li>
+            <li>
+              <p>Javascript</p>
+            </li>
+          </ul>
+
         </div>
 
         <div class="btn">
@@ -131,9 +146,9 @@
         </button>
       </div>
     </div>
-<div class="products-wrap">
-    <div class="products"></div>
-  </div>
+    <div class="products-wrap">
+      <div class="products"></div>
+    </div>
   </section>
 
   <script src="script.js"></script>

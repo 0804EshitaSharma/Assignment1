@@ -14,13 +14,14 @@ https://www.youtube.com/watch?v=o6bLYYStZss
 
 body {
     font-family: sans-serif;
+    background: no-repeat;
     background-image: url(https://img.freepik.com/free-vector/blue-white-low-poly-triangle-shapes-background_1035-19007.jpg?w=1800&t=st=1684051357~exp=1684051957~hmac=5726ab63e27e22a925b25cca143b2d6b1cb320727fef22d5b1bb7b56788a0481);
 }
 
 h1 {
     font-size: 40px;
     letter-spacing: 1px;
-    
+
 }
 
 h2 {
@@ -57,6 +58,11 @@ section.active {
     margin-top: 20px;
 }
 
+.form-container .select-box {
+    position: relative;
+    margin-top: 20px;
+}
+
 .form-container .input-box input {
     border: none;
     width: 100%;
@@ -85,6 +91,34 @@ section.active {
 
 }
 
+.form-container .select-box select {
+    border: none;
+    width: 100%;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-size: 16px;
+
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    color: #fff;
+
+}
+
+.form-container .select-box label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    transition: 0.5s;
+    ;
+}
+
 /* Learned this  way of styling form inputs from tutorial https://www.youtube.com/watch?v=H62pLIoqK28 */
 .form-container .input-box input:focus~label,
 .form-container .input-box input:valid~label {
@@ -105,6 +139,7 @@ section.active {
     background: transparent;
     outline: none;
     color: #fff;
+    font-family: sans-serif;
 
 }
 
@@ -117,6 +152,24 @@ section.active {
     color: #03a9f4;
 }
 
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container .select-box select:focus~label,
+.form-container .select-box select:default~label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #03a9f4;
+}
 
 .form-heading {
     text-align: center;
@@ -279,9 +332,10 @@ section.active {
 
 .about-container {
     width: 80%;
-    display: block;
+    display: flex;
     margin: auto;
     padding-top: 100px;
+    justify-content: space-between;
 
 }
 
@@ -292,7 +346,6 @@ section.active {
 }
 
 .image-section {
-    float: right;
     width: 40%;
 }
 
@@ -307,6 +360,7 @@ section.active {
     font-size: 18px;
     line-height: 1.5;
 }
+
 .about-content .content h3 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -315,25 +369,19 @@ section.active {
     line-height: 1.5;
     color: #00abf0;
 }
-.about-content h3{
+
+.about-content h3 {
     margin-top: 10px;
     color: #00abf0;
 }
+
 .about-section .btn {
-margin-top: 5px;
-margin-bottom: 5px;
-border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
 
 }
 
-@media screen and (max-width:768px) {
-    .about-container {
-        width: 80%;
-        display: block;
-        margin: auto;
-        padding-top: 50px;
-    }
-}
 
 .active-button {
     background-color: #00abf0;
@@ -353,7 +401,7 @@ border-radius: 3px;
 }
 
 /* https://www.youtube.com/watch?v=gzXyRa7jwk4 */
-.products::-webkit-scrollbar{
+.products::-webkit-scrollbar {
     display: none;
 }
 
@@ -365,7 +413,7 @@ border-radius: 3px;
 
 .scroll-img {
     height: 50px;
-   
+
 }
 
 .product {
@@ -468,7 +516,8 @@ nav ul li a:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
-.product button{
+
+.product button {
     display: block;
     margin: auto auto;
     padding: 10px 40px;
@@ -483,20 +532,13 @@ nav ul li a:hover {
 
 */
 
-@media screen and (max-width:768px) {
+@media (min-width:300px) and (max-width:768px) {
     nav ul {
         height: 130px;
         flex-direction: column;
         text-align: center;
         width: 100%;
 
-    }
-
-    .about-container {
-        width: 80%;
-        display: block;
-        margin: auto;
-        padding-top: 50px;
     }
 
     .form-content {
@@ -525,6 +567,7 @@ nav ul li a:hover {
 
 
 }
+
 /* Learned Media Queries from:
  https://www.youtube.com/watch?v=H-AmJSMcNfI 
  https://www.youtube.com/watch?v=s9dvP3_hpDs
@@ -558,19 +601,64 @@ nav ul li a:hover {
 
     .btn {
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     .products {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-        grid-gap: 50px;
-        margin: 50px auto;
         max-width: 1440px;
-        padding: 20px;
-        grid-auto-flow: row;
+        padding: 10px;
+        grid-auto-flow: column;
         overflow-y: auto;
         overscroll-behavior-inline: contain;
     }
+
+    .products-wrap {
+        position: fixed;
+        top: 260px;
+    }
+
+
+
+}
+
+@media (max-width:768px) {
+
+
+    .about-container {
+        display: block;
+        align-content: center;
+        margin: auto auto;
+    }
+
+    .about-content h1 {
+        font-size: 20px;
+        margin: auto auto;
+    }
+
+    .about-content .content p {
+        margin-top: 10px;
+        font-size: 10px;
+
+    }
+
+    .about-content .content h3 {
+
+        font-size: 20px;
+
+    }
+
+    .about-section .btn {
+        padding: 4px;
+
+    }
+
+    .image-section {
+        display: block;
+
+    }
+
 
 
 }
